@@ -2,16 +2,16 @@
 #include <math.h>
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
-    s.average = 0;
-    s.min = 0;
-    s.max = 0;
+    s.average, s.min, s.max = 0;
+//     s.min = 0;
+//     s.max = 0;
     int i;
     float sum=0.0,max,min;
     
     if(setlength>0)
     {
-        max=numberset[0];
-	    min=numberset[0];
+        max=min=numberset[0];
+// 	    min=numberset[0];
         for(i=0;i<setlength;i++)
         {
 		(numberset[i]>max)?(max=numberset[i]):NAN;
