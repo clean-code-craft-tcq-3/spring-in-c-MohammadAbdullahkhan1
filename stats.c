@@ -14,14 +14,16 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
 	    min=numberset[0];
         for(i=1;i<setlength;i++)
         {
-		    if(numberset[i]>max)
-		    {
-			    (max=numberset[i]);
-		    }
-		if(numberset[i]<min)
-		    {
-			    (min=numberset[i]);
-		    }
+		(numberset[i]>max)?(max=numberset[i]):NAN;
+		(numberset[i]<min)?(min=numberset[i]):NAN
+// 		    if(numberset[i]>max)
+// 		    {
+// 			    (max=numberset[i]);
+// 		    }
+// 		if(numberset[i]<min)
+// 		    {
+// 			    (min=numberset[i]);
+// 		    }
 
         }
         s.min=min;
