@@ -10,8 +10,8 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     
     if(setlength>0)
     {
-        /* maximum in the given number set */
         max=numberset[0];
+	    min=numberset[0];
         for(i=1;i<setlength;i++)
         {
 		    if(numberset[i]>max)
