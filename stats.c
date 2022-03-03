@@ -15,7 +15,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
         for(i=1;i<setlength;i++)
         {
 		(numberset[i]>max)?(max=numberset[i]):NAN;
-		(numberset[i]<min)?(min=numberset[i]):NAN
+		(numberset[i]<min)?(min=numberset[i]):NAN:
 // 		    if(numberset[i]>max)
 // 		    {
 // 			    (max=numberset[i]);
