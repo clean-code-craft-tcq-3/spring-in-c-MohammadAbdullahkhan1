@@ -16,8 +16,19 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
             (*(numberset+i)>max)?(max =*(numberset+i)):(min =*(numberset+i));
             sum = sum+*(numberset+i);
         }
+        if(setlength != 0)
+        {
+            s.average = sum/setlength;
+            s.min = min;
+            s.max = max;
+        }
     }
-    
+    else
+    {
+        s.average = 0;
+        s.min = 0;
+        s.max = 0;
+    }
 }
 
 int emailAlertCallCount = 0;
