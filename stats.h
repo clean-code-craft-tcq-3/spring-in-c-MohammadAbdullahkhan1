@@ -1,5 +1,5 @@
 struct Stats{
-  float averae;
+  float average;
   float max;
   float min;
 };
