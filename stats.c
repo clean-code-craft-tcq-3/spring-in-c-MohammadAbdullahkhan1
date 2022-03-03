@@ -17,10 +17,9 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
 		    (numberset[i]>max)?(max=numberset[i]):(min=numberset[i]);
 
         }
-        s.min=minimum;
-        s.max=maximum;
-    
-        /* Finding Average of the given number set */
+        s.min=min;
+        s.max=max;
+	    
         for(i=0;i<setlength;i++)
         {
             sum+=numberset[i];
